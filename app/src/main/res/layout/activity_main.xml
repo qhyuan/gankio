@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+      />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f3f3f3"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtn_home"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_home_selector"
+            android:text="首页"
+            android:textColor="@color/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/rbtn_rest"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_live_selector"
+            android:text="休息"
+            android:textColor="@color/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/rbtn_beautypic"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_grow_selector"
+            android:text="福利"
+            android:textColor="@color/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/rbtn_search"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_mine_selector"
+            android:text="搜索"
+            android:textColor="@color/tab_menu_text" />
+
+        <RadioButton
+            android:id="@+id/rbtn_other"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_test_selector"
+            android:text="收藏"
+            android:textColor="@color/tab_menu_text" />
+    </RadioGroup>
+</LinearLayout>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list >
+            <item android:drawable="@drawable/jfmall_no_image">
+                <shape android:shape="rectangle">
+                    <corners android:radius="8dp"/>
+                    <stroke android:color="#a3686868"  android:width="2dp"/>
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

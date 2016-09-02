@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Volumes/YqhHD/Git/gankio/indicatorlibrary/src/main/assets"/><source path="/Volumes/YqhHD/Git/gankio/indicatorlibrary/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Volumes/YqhHD/Git/gankio/indicatorlibrary/src/release/assets"/></dataSet></merger>

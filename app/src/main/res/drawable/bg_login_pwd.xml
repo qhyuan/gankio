@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="@color/bg_login_check"/>
+    <corners
+        android:topRightRadius="5dip"
+        android:bottomRightRadius="5dip"
+        />
+</shape>

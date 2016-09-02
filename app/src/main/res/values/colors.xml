@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#00aaee</color>
+    <color name="colorPrimaryDark">#00aaee</color>
+    <color name="colorAccent">#00aaee</color>
+    <color name="no">#00292929</color>
+    <color name="bg_normal">#ffffff</color>
+    <color name="bg_click">#f0f0f0</color>
+    <color name="bg_login">#f3f3f3</color>
+    <color name="bg_login_check">#55eef3fa</color>
+    <color name="white">#ffffff</color>
+    <color name="separation_line_color">#e6e6e6</color>
+    <color name="bj_text_home_title">#666666</color>
+
+    <color name="fluency_test_title">#333333</color>
+    <color name="fluency_test_desc">#999999</color>
+    <color name="fluency_test_floor">#999999</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="fullscreen_bg">#5fffffff</color>
+</resources>
