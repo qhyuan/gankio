@@ -4,7 +4,6 @@ import android.content.Context;
 
 import com.walle.gankio.utils.LogUtil;
 
-import java.io.IOException;
 import java.util.logging.Logger;
 
 import okhttp3.Cache;
@@ -27,19 +26,16 @@ public class OkHttpIntercepter {
 
     public static Interceptor getLogIntercepter(final Context context, final Cache cache){
             if(mLog==null){
-                mLog = new Interceptor() {
-                    @Override
-                    public Response intercept(Chain chain) throws IOException {
-                        Request request = chain.request();
-                        Logger.getLogger(TAG).info(String.format("CacheInfo  %s on %s%n%s", cache.hitCount(), cache.size(), cache.urls()));
-                        long t1 = System.nanoTime();
-                        Logger.getLogger(TAG).info(String.format("Sending request %s on %s%n%s", request.url(), chain.connection(), request.headers()));
-                        Response response = chain.proceed(request);
-                        long t2 = System.nanoTime();
-                        Logger.getLogger(TAG).info(String.format("Received response for %s in %.1fms%n%s",
-                                response.request().url(), (t2 - t1) / 1e6d, response.headers()));
-                        return response;
-                    }
+                mLog = chain -> {
+                    Request request = chain.request();
+                    Logger.getLogger(TAG).info(String.format("CacheInfo  %s on %s%n%s", cache.hitCount(), cache.size(), cache.urls()));
+                    long t1 = System.nanoTime();
+                    Logger.getLogger(TAG).info(String.format("Sending request %s on %s%n%s", request.url(), chain.connection(), request.headers()));
+                    Response response = chain.proceed(request);
+                    long t2 = System.nanoTime();
+                    Logger.getLogger(TAG).info(String.format("Received response for %s in %.1fms%n%s",
+                            response.request().url(), (t2 - t1) / 1e6d, response.headers()));
+                    return response;
                 };
             }
         return mLog;
@@ -47,30 +43,27 @@ public class OkHttpIntercepter {
 
     public static  Interceptor getCacheIntercepter(final Context context) {
         if (mCache == null) {
-            mCache = new Interceptor() {
-                @Override
-                public Response intercept(Chain chain) throws IOException {
-                    Request request = chain.request();
-                    if (!NetworkUtils.isNetworkUp(context)) {
-                        request = request.newBuilder()
-                                .cacheControl(CacheControl.FORCE_CACHE)
-                                .build();
-                        LogUtil.e(TAG, "no network");
-                    }
-                    Response originalResponse = chain.proceed(request);
-                    if (NetworkUtils.isNetworkUp(context)) {
-                        //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
-                        String cacheControl = request.cacheControl().toString();
-                        return originalResponse.newBuilder()
-                                .header("Cache-Control", cacheControl)
-                                .removeHeader("Pragma")
-                                .build();
-                    } else {
-                        return originalResponse.newBuilder()
-                                .header("Cache-Control", "public, only-if-cached, max-stale=2419200")
-                                .removeHeader("Pragma")
-                                .build();
-                    }
+            mCache = chain -> {
+                Request request = chain.request();
+                if (!NetworkUtils.isNetworkUp(context)) {
+                    request = request.newBuilder()
+                            .cacheControl(CacheControl.FORCE_CACHE)
+                            .build();
+                    LogUtil.e(TAG, "no network");
+                }
+                Response originalResponse = chain.proceed(request);
+                if (NetworkUtils.isNetworkUp(context)) {
+                    //有网的时候读接口上的@Headers里的配置，你可以在这里进行统一的设置
+                    String cacheControl = request.cacheControl().toString();
+                    return originalResponse.newBuilder()
+                            .header("Cache-Control", cacheControl)
+                            .removeHeader("Pragma")
+                            .build();
+                } else {
+                    return originalResponse.newBuilder()
+                            .header("Cache-Control", "public, only-if-cached, max-stale=2419200")
+                            .removeHeader("Pragma")
+                            .build();
                 }
             };
         }

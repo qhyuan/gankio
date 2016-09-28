@@ -16,10 +16,16 @@ import retrofit2.Retrofit;
  */
 public class FileConverterFactory extends Converter.Factory {
 
-    public static FileConverterFactory creat() {
+    public static FileConverterFactory create() {
         return new FileConverterFactory();
     }
 
+    /**
+     * @param type : Content-Type: *
+     * @param annotations
+     * @param retrofit
+     * @return
+     */
     @Override
     public Converter<ResponseBody, File> responseBodyConverter(Type type, Annotation[] annotations, Retrofit retrofit) {
         LogUtil.i("Type=" + type);

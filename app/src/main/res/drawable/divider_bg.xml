@@ -4,6 +4,6 @@
 
     <gradient
         android:type="linear" />
-    <size android:height="14dp"/>
+    <size android:height="4dp"/>
 
 </shape>

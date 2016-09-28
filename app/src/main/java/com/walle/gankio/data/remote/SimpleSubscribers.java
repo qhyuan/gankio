@@ -21,12 +21,7 @@ public class SimpleSubscribers<T> extends Subscriber<T> {
 
     @Override
     public void onStart() {
-        UIHANDLER.post(new Runnable() {
-            @Override
-            public void run() {
-                onStartOnMainThread();
-            }
-        });
+        UIHANDLER.post(this::onStartOnMainThread);
     }
 
     /**
@@ -43,7 +38,6 @@ public class SimpleSubscribers<T> extends Subscriber<T> {
 
     @Override
     public void onError(Throwable e) {
-        e.printStackTrace();
         Log.e(TAG, "onError=" + e.getMessage());
     }
 

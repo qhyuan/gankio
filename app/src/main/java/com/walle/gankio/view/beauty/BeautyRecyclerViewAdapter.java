@@ -16,10 +16,10 @@ import com.walle.gankio.widget.glide.GlideRoundTransform;
 import java.util.List;
 
 
-public class BeautyRecyclerViewAdapter extends BaseAdapterWithLoadmore<BeautyRecyclerViewAdapter.ViewHolder> {
+class BeautyRecyclerViewAdapter extends BaseAdapterWithLoadmore<BeautyRecyclerViewAdapter.ViewHolder> {
     private static final String TAG = "BeautyRecyclerViewAdapter";
 
-    public BeautyRecyclerViewAdapter(Fragment fragment,List<SearchResult.ResultsEntity> items) {
+    BeautyRecyclerViewAdapter(Fragment fragment, List<SearchResult.ResultsEntity> items) {
         super(fragment,items);
     }
 
@@ -36,6 +36,7 @@ public class BeautyRecyclerViewAdapter extends BaseAdapterWithLoadmore<BeautyRec
 
     @Override
     protected void doBindViewHolder(final BeautyRecyclerViewAdapter.ViewHolder holder, int position) {
+
         final SearchResult.ResultsEntity item = mValues.get(position);
         holder.mImgView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,11 +54,11 @@ public class BeautyRecyclerViewAdapter extends BaseAdapterWithLoadmore<BeautyRec
     }
 
 
-    public class ViewHolder extends BaseAdapterWithLoadmore.ViewHolder {
+    class ViewHolder extends BaseAdapterWithLoadmore.ViewHolder {
 
-        public ImageView mImgView;
+        ImageView mImgView;
 
-        public ViewHolder(View view) {
+        ViewHolder(View view) {
             super(view);
             mImgView = (ImageView) view.findViewById(R.id.img);
         }

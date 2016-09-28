@@ -21,7 +21,6 @@ import com.walle.gankio.view.search.SearchPresenter;
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
 
-    private FrameLayout mContent;
     private RadioGroup mRadioGroup;
     private HomeFragment mHomeFragment;
     private RestFragment mRestFragment;
@@ -36,7 +35,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
 
     @Override
     protected void findView() {
-        mContent = $(R.id.content);
         mRadioGroup = $(R.id.radioGroup);
     }
 
@@ -45,7 +43,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         mRadioGroup.setOnCheckedChangeListener(this);
         RadioButton childAt = (RadioButton) mRadioGroup.getChildAt(0);
         childAt.setChecked(true);
-
     }
 
     @Override

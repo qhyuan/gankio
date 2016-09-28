@@ -1,10 +1,9 @@
 package com.walle.gankio.view.home;
 
 import android.support.v7.widget.SwitchCompat;
-import android.view.View;
 import android.widget.CompoundButton;
 
-import com.walle.gankio.Config;
+import com.walle.gankio.Constant;
 import com.walle.gankio.R;
 import com.walle.gankio.base.BaseActivity;
 import com.walle.gankio.data.local.Preferences;
@@ -41,7 +40,7 @@ public class HomeSettingActivity extends BaseActivity implements CompoundButton.
     @Override
     protected void initView() {
         mTitleConf =new HashMap<>();
-        mSp = Preferences.build(getApplicationContext(), Config.TITLE_SP);
+        mSp = Preferences.build(getApplicationContext(), Constant.TITLE_SP);
 
         mAndroid.setChecked(mSp.getBoolean((String) mAndroid.getTag()));
         mIos.setChecked(mSp.getBoolean((String) mIos.getTag()));

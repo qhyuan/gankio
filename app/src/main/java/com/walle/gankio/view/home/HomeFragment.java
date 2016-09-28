@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.viewpagerindicator.TabPageIndicator;
-import com.walle.gankio.Config;
+import com.walle.gankio.Constant;
 import com.walle.gankio.R;
 import com.walle.gankio.adapter.FragmentPagerAdapterCompat;
 import com.walle.gankio.base.BaseFragment;
@@ -130,7 +130,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener, 
         mSortedTitle.add("拓展资源");
         mSortedTitle.add("瞎推荐");
 
-        Map<String, Boolean> all = (Map<String, Boolean>) Preferences.build(getApplicationContext(), Config.TITLE_SP).getAll();
+        Map<String, Boolean> all = (Map<String, Boolean>) Preferences.build(getApplicationContext(), Constant.TITLE_SP).getAll();
         Set<String> keys = all.keySet();
         for (String key : keys) {
             if (!all.get(key)) {

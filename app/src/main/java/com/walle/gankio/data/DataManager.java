@@ -1,6 +1,7 @@
 package com.walle.gankio.data;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.walle.gankio.App;
@@ -28,6 +29,7 @@ import rx.Subscription;
 public final class DataManager extends SimpleSubscribeOperation {
 
     private static Retrofit retrofit;
+    @SuppressLint("StaticFieldLeak")
     private static final Context context;
 
     static {

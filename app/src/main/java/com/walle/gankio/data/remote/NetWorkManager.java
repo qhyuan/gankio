@@ -47,6 +47,7 @@ public class NetWorkManager {
                 .addInterceptor(OkHttpIntercepter.getLogIntercepter(context,cache))
                 .build();
         retrofit = new Retrofit.Builder().client(client)
+                .addConverterFactory(FileConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .baseUrl(Constant.BaseUrl).build();

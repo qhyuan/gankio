@@ -12,6 +12,7 @@ import com.walle.gankio.App;
 import com.walle.gankio.R;
 import com.walle.gankio.data.remote.model.SearchResult;
 import com.walle.gankio.listener.OnLoadMoreListener;
+import com.walle.gankio.utils.LogUtil;
 
 import java.util.List;
 
@@ -57,6 +58,7 @@ public abstract class BaseAdapterWithLoadmore<H extends BaseAdapterWithLoadmore.
 
     @Override
     public H onCreateViewHolder(ViewGroup parent, int viewType) {
+        LogUtil.d(TAG,"onCreateViewHolder");
         View view = null;
         if (VIEW_LOADMORE == viewType || viewType==VIEW_NONE) {
             view =  LayoutInflater.from(parent.getContext())
