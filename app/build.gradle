@@ -30,10 +30,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("yqh.jks")
-            storePassword "yqh19920113"
-            keyAlias "yqh"
-            keyPassword "yqh19920113"
+          
         }
     }
 
