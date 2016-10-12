@@ -21,7 +21,12 @@ public class SimpleSubscribers<T> extends Subscriber<T> {
 
     @Override
     public void onStart() {
-        UIHANDLER.post(this::onStartOnMainThread);
+        UIHANDLER.post(new Runnable() {
+            @Override
+            public void run() {
+                SimpleSubscribers.this.onStartOnMainThread();
+            }
+        });
     }
 
     /**

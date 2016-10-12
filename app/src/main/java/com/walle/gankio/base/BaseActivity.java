@@ -10,8 +10,11 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.umeng.analytics.MobclickAgent;
+import com.umeng.message.PushAgent;
 import com.walle.gankio.R;
 import com.walle.gankio.utils.WindowUtil;
+
+import static anetwork.channel.http.NetworkSdkSetting.context;
 
 
 public abstract class BaseActivity extends AppCompatActivity {
@@ -24,6 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
+        PushAgent.getInstance(context).onAppStart();
         getIntentData(getIntent());
         setContentView(getContentViewRes());
         super.onCreate(savedInstanceState);

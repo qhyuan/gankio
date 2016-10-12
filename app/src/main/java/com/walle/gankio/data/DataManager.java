@@ -3,6 +3,7 @@ package com.walle.gankio.data;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 
 import com.walle.gankio.App;
 import com.walle.gankio.data.local.DBManager;

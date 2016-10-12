@@ -145,12 +145,12 @@ public abstract class BaseAdapterWithLoadmore<H extends BaseAdapterWithLoadmore.
 
         private final View mSuccess;
         private final View mProcessBar;
-        private final TextView mNoMore;
+        private  TextView mNoMore;
         private final TextView mLoadMore;
 
         public ViewHolder(View view) {
             super(view);
-            mNoMore = (TextView) view.findViewById(R.id.nomore);
+
             mLoadMore = (TextView) view.findViewById(R.id.loadmore);
             mSuccess = view.findViewById(R.id.ivSuccess);
             mProcessBar = view.findViewById(R.id.progressbar);

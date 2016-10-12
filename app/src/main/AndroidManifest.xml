@@ -25,6 +25,10 @@
         <!--//umeng-->
         <meta-data android:value="57b6a82667e58e56bb002755" android:name="UMENG_APPKEY"/>
         <meta-data android:value="{UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="c2351d0bde0fbc2cf71a0b082005fc09">
+        </meta-data>
         <!--//umeng-->
 
         <activity android:name=".view.MainActivity"/>

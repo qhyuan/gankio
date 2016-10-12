@@ -27,6 +27,7 @@ import com.walle.gankio.base.BaseActivity;
 import com.walle.gankio.data.DataManager;
 import com.walle.gankio.data.local.DBManager;
 import com.walle.gankio.data.local.entity.Collect;
+import com.walle.gankio.data.remote.SimpleSubscribers;
 import com.walle.gankio.utils.WindowUtil;
 
 import java.text.DateFormat;
@@ -173,9 +174,9 @@ public class WebViewActivity extends BaseActivity implements NestedScrollView.On
             collect.setUrl(mUrl);
             collect.setDesc(mDesc);
            if(isCollected){
-               DataManager.deleteCollect(collect,null);
+               DataManager.deleteCollect(collect,new SimpleSubscribers());
            }else {
-               DataManager.insertCollect(collect,null);
+               DataManager.insertCollect(collect,new SimpleSubscribers());
            }
             isCollected = !isCollected;
             item.setTitle(isCollected?"取消收藏":"收藏");
