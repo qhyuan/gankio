@@ -1,0 +1,1470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
+<style>
+body {
+    max-width: 800px;
+    background-color: #000000;
+    background: -webkit-gradient(linear, left top, right bottom, from(#000000), to(#272d33));
+    background: -moz-linear-gradient(left top, #000000, #272d33);
+    color: #f3f3f3;
+    font-family: 'Roboto', Sans-Serif;
+}
+.issue {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px 0px 5px 5px;
+}
+.id {
+    font-size: 14pt;
+    color: #bebebe;
+    margin: 5px 0px 5px 0px;
+}
+.category {
+    font-size: 18pt;
+    color: #bebebe;
+    margin: 10px 0px 5px 0px;
+}
+.explanation {
+    margin-top: 10px;
+}
+.explanation b {
+    color: #ffbbbb;
+}
+.explanation code {
+    color: #bebebe;
+    font-family: 'Roboto', Sans-Serif;
+}
+pre {
+    background-color: #282828;
+    margin: 5px 0px 5px 5px;
+    padding: 5px 5px 5px 0px;
+    overflow: hidden;
+}
+.lineno {
+    color: #4f4f4f;
+}
+.embedimage {
+    max-width: 200px;
+    max-height: 200px;
+}
+th { font-weight: normal; }
+table { border: none; }
+.metadata {
+}
+.location {
+    color: #bebebe;
+}
+.message { }
+.errorspan { color: #33b5e5; }
+.errorline { color: #33b5e5; }
+.warningslist { margin-bottom: 20px; }
+.overview {
+    padding: 10pt;
+    width: 100%;
+    overflow: auto;
+    border-collapse:collapse;
+}
+.overview tr {
+    border-top: solid 1px #39393a;
+    border-bottom: solid 1px #39393a;
+}
+.countColumn {
+    text-align: right;
+    padding-right: 20px;
+}
+.issueColumn {
+   padding-left: 16px;
+}
+.categoryColumn {
+   position: relative;
+   left: -50px;
+   padding-top: 20px;
+   padding-bottom: 5px;
+}
+.titleSeparator {
+    background-color: #33b5e5;
+    height: 3px;
+    margin-bottom: 10px;
+}
+.categorySeparator {
+    background-color: #33b5e5;
+    height: 3px;
+    margin-bottom: 10px;
+}
+.issueSeparator {
+    background-color: #39393a;
+    height: 2px;
+    margin-bottom: 10px;
+}
+.location a:link {
+    text-decoration: none;
+    color: #bebebe;
+}
+.location a:hover {
+    text-decoration: underline;
+    color: #f3f3f3;
+}
+a:link {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+a:visited {
+    text-decoration: none;
+    color: #bebebe;
+}
+a:hover {
+    text-decoration: underline;
+    color: #f3f3f3;
+}
+a:active {
+    text-decoration: underline;
+    color: #f3f3f3;
+}
+.moreinfo a:link {
+    text-decoration: underline;
+    color: #33b5e5;
+}
+.moreinfo a:visited {
+    text-decoration: underline;
+    color: #33b5e5;
+}
+.issue a:link {
+    text-decoration: underline;
+}
+.issue a:visited {
+    text-decoration: underline;
+}
+.id a:link {
+    text-decoration: none;
+    color: #bebebe;
+}
+.id a:visited {
+    text-decoration: none;
+    color: #bebebe;
+}
+.id a:hover {
+    text-decoration: underline;
+    color: #f3f3f3;
+}
+.id a:active {
+    text-decoration: underline;
+    color: #bebebe;
+}
+.category a:link {
+    text-decoration: none;
+    color: #bebebe;
+}
+.category a:visited {
+    text-decoration: none;
+    color: #bebebe;
+}
+.category a:hover {
+    text-decoration: underline;
+    color: #f3f3f3;
+}
+.category a:active {
+    text-decoration: underline;
+    color: #bebebe;
+}
+button {
+    color: #ffffff;
+    background-color: #353535;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: solid 1px #5b5b5b;
+    font-family: 'Roboto', Sans-Serif;
+    font-size: 12pt;
+}
+</style>
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body>
+<h1>Lint Report</h1>
+<div class="titleSeparator"></div>
+Check performed at Thu Dec 01 15:51:58 CST 2016.<br/>
+73 errors and 17 warnings found:<br/><br/>
+<table class="overview">
+<tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#InlinedApi">InlinedApi: Using inlined constants on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">73</td><td class="issueColumn"><img border="0" align="top" width="15" height="15" alt="Error" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAB00lEQVR42nWTS0hbQRiF587MzkUXooi6UHAjhNKNSkGhCDXxkZhUIwWhBLoRsQpi3bXmIboSV2aliI+WKqLUtqsuSxclrhRBUMnVmIpa2oIkQon+zhlr9F7jwOEw/znfLO6dYcy2Arys6AUv6x7klTNh4ViFY485u2+N8Uc8yB1DH0Vt6ki2UkZ20LkS/Eh6CXPk6FnAKVHNJ3nViind9E/6tTKto3TxaU379Qw5euhn4QXxOGzKFjqT7Vmlwx8IC357jh76GvzC64pj4mn6VLbRbf0Nvdcw3J6hr7gS9o3XDxwIN/0RPot+h95pGG7P0AfH1oVz6UR4ya5foXkNw3Pl4Ngub/p6yD1k13FoTsPwXDk4ti89SwnuJrtigYiGY4FhypWDY2aeb0CJ4rzZou9GPc0Y1drtGfrgWLzweUm8uPNsx2ikrHgjHT6LUOrzD/rpDpIlU0JfcaX6d8UfdoW38/20ZbiuxF10MHL1tRNvp2/mSuihn70kZl2/MJ+8Xtkq8NOm4VRqoIUKLy0Hx2mx3PN/5iTk6KFvuaJmyxux3zE8tFPTm9p84KMNdcAGa9COvZqnkaN37wNJvpooSvZFexIvx2b3OkdX4dgne6N3XtUl5wqoyBY2uZQAAAAASUVORK5CYII=" />
+<a href="#NewApi">NewApi: Calling new methods on older versions</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#OldTargetApi">OldTargetApi: Target SDK attribute is not targeting latest version</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#GradleDependency">GradleDependency: Obsolete Gradle Dependency</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#GradleDynamicVersion">GradleDynamicVersion: Gradle Dynamic Version</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#GradleOverrides">GradleOverrides: Value overridden by Gradle build script</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Performance">Performance</a>
+</td></tr>
+<tr>
+<td class="countColumn">6</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#UnusedResources">UnusedResources: Unused resources</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#IconMissingDensityFolder">IconMissingDensityFolder: Missing density folder</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability">Usability</a>
+</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#ViewConstructor">ViewConstructor: Missing View constructors for XML inflation</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Accessibility">Accessibility</a>
+</td></tr>
+<tr>
+<td class="countColumn">4</td><td class="issueColumn"><img border="0" align="top" width="16" height="15" alt="Warning" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAA3klEQVR42nWPsWoCQRCGVyJiF9tAsNImbcDKR/ABBEurYCsBsfQRQiAPYGPyAAnYWQULS9MErNU2Vsr/ObMX7g6O+xd2/5n5dmY3hFQEBVVpuCsVT/yoUl6u4XotBz4E4qR2YYyH6ugEWY8comR/t+tvPPJtSLPYvhvvTswtbdCmCOwjMHXAzjP9kB/ByB7nejbgy43WVPF3WNG+p9+kzkozdhGAQdZh7BlHdGTL3z98pp6Um7okKdvHNuIzWk+9xN+yINOcHps0OnAfuOOoHJH3pmHghhYP2VJcaXx7BaKz9YB2HVrDAAAAAElFTkSuQmCC"/>
+<a href="#ClickableViewAccessibility">ClickableViewAccessibility: Accessibility in Custom Views</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (15)</a>
+</td></tr></table>
+<br/>
+<a name="Correctness"></a>
+<div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
+</div>
+<a name="InlinedApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">InlinedApi: Using inlined constants on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IcsLinearLayout.java">../../src/main/java/com/viewpagerindicator/IcsLinearLayout.java</a>:40</span>: <span class="message">Field requires API level 11 (current min is 4): <code>android.widget.LinearLayout#SHOW_DIVIDER_NONE</code></span><br /><pre class="errorlines">
+<span class="lineno">  37</span>         TypedArray a = context.obtainStyledAttributes(null, LL, themeAttr, 0);
+<span class="lineno">  38</span>         setDividerDrawable(a.getDrawable(IcsLinearLayout.LL_DIVIDER));
+<span class="lineno">  39</span>         mDividerPadding = a.getDimensionPixelSize(LL_DIVIDER_PADDING, 0);
+<span class="lineno">  40</span>         mShowDividers = a.getInteger(LL_SHOW_DIVIDER, <span class="errorspan">SHOW_DIVIDER_NONE);</span>
+<span class="lineno">  41</span>         a.recycle();
+<span class="lineno">  42</span>     }
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ & Eclipse/ADT<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using inlined constants on older versions.</div>
+<div class="explanation">
+This check scans through all the Android API field references in the application and flags certain constants, such as static final integers and Strings, which were introduced in later versions. These will actually be copied into the class files rather than being referenced, which means that the value is available even when running on older devices. In some cases that's fine, and in other cases it can result in a runtime crash or incorrect behavior. It depends on the context, so consider the code carefully and device whether it's safe and can be suppressed or whether the code needs tbe guarded.<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "InlinedApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">NewApi: Calling new methods on older versions</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:204</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 201</span>         if (mViewPager == null) {
+<span class="lineno"> 202</span>             return;
+<span class="lineno"> 203</span>         }
+<span class="lineno"> 204</span>         final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 205</span>         if (count == 0) {
+<span class="lineno"> 206</span>             return;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:285</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 282</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 283</span>             return true;
+<span class="lineno"> 284</span>         }
+<span class="lineno"> 285</span>         if ((mViewPager == null) || (mViewPager.<span class="errorspan">getAdapter().getCount() == 0)) {</span>
+<span class="lineno"> 286</span>             return false;
+<span class="lineno"> 287</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:309</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#beginFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 306</span> 
+<span class="lineno"> 307</span>                 if (mIsDragging) {
+<span class="lineno"> 308</span>                     mLastMotionX = x;
+<span class="lineno"> 309</span>                     if (mViewPager.isFakeDragging() || mViewPager.<span class="errorspan">beginFakeDrag()) {</span>
+<span class="lineno"> 310</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 311</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:309</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 306</span> 
+<span class="lineno"> 307</span>                 if (mIsDragging) {
+<span class="lineno"> 308</span>                     mLastMotionX = x;
+<span class="lineno"> 309</span>                     if (mViewPager.<span class="errorspan">isFakeDragging() || mViewPager.beginFakeDrag()) {</span>
+<span class="lineno"> 310</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 311</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:310</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#fakeDragBy</span><br /><pre class="errorlines">
+<span class="lineno"> 307</span>                 if (mIsDragging) {
+<span class="lineno"> 308</span>                     mLastMotionX = x;
+<span class="lineno"> 309</span>                     if (mViewPager.isFakeDragging() || mViewPager.beginFakeDrag()) {
+<span class="lineno"> 310</span>                         mViewPager.<span class="errorspan">fakeDragBy(deltaX);</span>
+<span class="lineno"> 311</span>                     }
+<span class="lineno"> 312</span>                 }
+</pre>
+<button id="NewApiDivLink" onclick="reveal('NewApiDiv');" />+ 68 More Occurrences...</button>
+<div id="NewApiDiv" style="display: none">
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:320</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 317</span>             case MotionEvent.ACTION_CANCEL:
+<span class="lineno"> 318</span>             case MotionEvent.ACTION_UP:
+<span class="lineno"> 319</span>                 if (!mIsDragging) {
+<span class="lineno"> 320</span>                     final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 321</span>                     final int width = getWidth();
+<span class="lineno"> 322</span>                     final float halfWidth = width / 2f;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:327</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 324</span> 
+<span class="lineno"> 325</span>                     if ((mCurrentPage > 0) &amp;&amp; (ev.getX() &lt; halfWidth - sixthWidth)) {
+<span class="lineno"> 326</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 327</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage - 1);</span>
+<span class="lineno"> 328</span>                         }
+<span class="lineno"> 329</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:332</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 329</span>                         return true;
+<span class="lineno"> 330</span>                     } else if ((mCurrentPage &lt; count - 1) &amp;&amp; (ev.getX() > halfWidth + sixthWidth)) {
+<span class="lineno"> 331</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 332</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage + 1);</span>
+<span class="lineno"> 333</span>                         }
+<span class="lineno"> 334</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:340</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#endFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 337</span> 
+<span class="lineno"> 338</span>                 mIsDragging = false;
+<span class="lineno"> 339</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 340</span>                 if (mViewPager.isFakeDragging()) mViewPager.<span class="errorspan">endFakeDrag();</span>
+<span class="lineno"> 341</span>                 break;
+<span class="lineno"> 342</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:340</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 337</span> 
+<span class="lineno"> 338</span>                 mIsDragging = false;
+<span class="lineno"> 339</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 340</span>                 if (mViewPager.<span class="errorspan">isFakeDragging()) mViewPager.endFakeDrag();</span>
+<span class="lineno"> 341</span>                 break;
+<span class="lineno"> 342</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:370</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 367</span>             return;
+<span class="lineno"> 368</span>         }
+<span class="lineno"> 369</span>         if (mViewPager != null) {
+<span class="lineno"> 370</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 371</span>         }
+<span class="lineno"> 372</span>         if (view.getAdapter() == null) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:372</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 369</span>         if (mViewPager != null) {
+<span class="lineno"> 370</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 371</span>         }
+<span class="lineno"> 372</span>         if (view.<span class="errorspan">getAdapter() == null) {</span>
+<span class="lineno"> 373</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 374</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:376</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 373</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 374</span>         }
+<span class="lineno"> 375</span>         mViewPager = view;
+<span class="lineno"> 376</span>         mViewPager.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 377</span>         invalidate();
+<span class="lineno"> 378</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:391</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 388</span>         if (mViewPager == null) {
+<span class="lineno"> 389</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 390</span>         }
+<span class="lineno"> 391</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 392</span>         mCurrentPage = item;
+<span class="lineno"> 393</span>         invalidate();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:470</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 467</span>             result = specSize;
+<span class="lineno"> 468</span>         } else {
+<span class="lineno"> 469</span>             //Calculate the width according the views count
+<span class="lineno"> 470</span>             final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 471</span>             result = (int)(getPaddingLeft() + getPaddingRight()
+<span class="lineno"> 472</span>                     + (count * 2 * mRadius) + (count - 1) * mRadius + 1);
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IconPageIndicator.java">../../src/main/java/com/viewpagerindicator/IconPageIndicator.java</a>:116</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 113</span>             return;
+<span class="lineno"> 114</span>         }
+<span class="lineno"> 115</span>         if (mViewPager != null) {
+<span class="lineno"> 116</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 117</span>         }
+<span class="lineno"> 118</span>         PagerAdapter adapter = view.getAdapter();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IconPageIndicator.java">../../src/main/java/com/viewpagerindicator/IconPageIndicator.java</a>:118</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 115</span>         if (mViewPager != null) {
+<span class="lineno"> 116</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 117</span>         }
+<span class="lineno"> 118</span>         PagerAdapter adapter = view.<span class="errorspan">getAdapter();</span>
+<span class="lineno"> 119</span>         if (adapter == null) {
+<span class="lineno"> 120</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IconPageIndicator.java">../../src/main/java/com/viewpagerindicator/IconPageIndicator.java</a>:123</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 120</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 121</span>         }
+<span class="lineno"> 122</span>         mViewPager = view;
+<span class="lineno"> 123</span>         view.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 124</span>         notifyDataSetChanged();
+<span class="lineno"> 125</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IconPageIndicator.java">../../src/main/java/com/viewpagerindicator/IconPageIndicator.java</a>:129</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 126</span> 
+<span class="lineno"> 127</span>     public void notifyDataSetChanged() {
+<span class="lineno"> 128</span>         mIconsLayout.removeAllViews();
+<span class="lineno"> 129</span>         IconPagerAdapter iconAdapter = (IconPagerAdapter) mViewPager.<span class="errorspan">getAdapter();</span>
+<span class="lineno"> 130</span>         int count = iconAdapter.getCount();
+<span class="lineno"> 131</span>         for (int i = 0; i &lt; count; i++) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IconPageIndicator.java">../../src/main/java/com/viewpagerindicator/IconPageIndicator.java</a>:155</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 152</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 153</span>         }
+<span class="lineno"> 154</span>         mSelectedIndex = item;
+<span class="lineno"> 155</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 156</span> 
+<span class="lineno"> 157</span>         int tabCount = mIconsLayout.getChildCount();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:163</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 160</span>         if (mViewPager == null) {
+<span class="lineno"> 161</span>             return;
+<span class="lineno"> 162</span>         }
+<span class="lineno"> 163</span>         final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 164</span>         if (count == 0) {
+<span class="lineno"> 165</span>             return;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:197</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 194</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 195</span>             return true;
+<span class="lineno"> 196</span>         }
+<span class="lineno"> 197</span>         if ((mViewPager == null) || (mViewPager.<span class="errorspan">getAdapter().getCount() == 0)) {</span>
+<span class="lineno"> 198</span>             return false;
+<span class="lineno"> 199</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:221</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#beginFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 218</span> 
+<span class="lineno"> 219</span>                 if (mIsDragging) {
+<span class="lineno"> 220</span>                     mLastMotionX = x;
+<span class="lineno"> 221</span>                     if (mViewPager.isFakeDragging() || mViewPager.<span class="errorspan">beginFakeDrag()) {</span>
+<span class="lineno"> 222</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 223</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:221</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 218</span> 
+<span class="lineno"> 219</span>                 if (mIsDragging) {
+<span class="lineno"> 220</span>                     mLastMotionX = x;
+<span class="lineno"> 221</span>                     if (mViewPager.<span class="errorspan">isFakeDragging() || mViewPager.beginFakeDrag()) {</span>
+<span class="lineno"> 222</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 223</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:222</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#fakeDragBy</span><br /><pre class="errorlines">
+<span class="lineno"> 219</span>                 if (mIsDragging) {
+<span class="lineno"> 220</span>                     mLastMotionX = x;
+<span class="lineno"> 221</span>                     if (mViewPager.isFakeDragging() || mViewPager.beginFakeDrag()) {
+<span class="lineno"> 222</span>                         mViewPager.<span class="errorspan">fakeDragBy(deltaX);</span>
+<span class="lineno"> 223</span>                     }
+<span class="lineno"> 224</span>                 }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:232</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 229</span>             case MotionEvent.ACTION_CANCEL:
+<span class="lineno"> 230</span>             case MotionEvent.ACTION_UP:
+<span class="lineno"> 231</span>                 if (!mIsDragging) {
+<span class="lineno"> 232</span>                     final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 233</span>                     final int width = getWidth();
+<span class="lineno"> 234</span>                     final float halfWidth = width / 2f;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:239</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 236</span> 
+<span class="lineno"> 237</span>                     if ((mCurrentPage > 0) &amp;&amp; (ev.getX() &lt; halfWidth - sixthWidth)) {
+<span class="lineno"> 238</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 239</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage - 1);</span>
+<span class="lineno"> 240</span>                         }
+<span class="lineno"> 241</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:244</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 241</span>                         return true;
+<span class="lineno"> 242</span>                     } else if ((mCurrentPage &lt; count - 1) &amp;&amp; (ev.getX() > halfWidth + sixthWidth)) {
+<span class="lineno"> 243</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 244</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage + 1);</span>
+<span class="lineno"> 245</span>                         }
+<span class="lineno"> 246</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:252</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#endFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 249</span> 
+<span class="lineno"> 250</span>                 mIsDragging = false;
+<span class="lineno"> 251</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 252</span>                 if (mViewPager.isFakeDragging()) mViewPager.<span class="errorspan">endFakeDrag();</span>
+<span class="lineno"> 253</span>                 break;
+<span class="lineno"> 254</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:252</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 249</span> 
+<span class="lineno"> 250</span>                 mIsDragging = false;
+<span class="lineno"> 251</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 252</span>                 if (mViewPager.<span class="errorspan">isFakeDragging()) mViewPager.endFakeDrag();</span>
+<span class="lineno"> 253</span>                 break;
+<span class="lineno"> 254</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:283</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 280</span>         }
+<span class="lineno"> 281</span>         if (mViewPager != null) {
+<span class="lineno"> 282</span>             //Clear us from the old pager.
+<span class="lineno"> 283</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 284</span>         }
+<span class="lineno"> 285</span>         if (viewPager.getAdapter() == null) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:285</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 282</span>             //Clear us from the old pager.
+<span class="lineno"> 283</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 284</span>         }
+<span class="lineno"> 285</span>         if (viewPager.<span class="errorspan">getAdapter() == null) {</span>
+<span class="lineno"> 286</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 287</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:289</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 286</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 287</span>         }
+<span class="lineno"> 288</span>         mViewPager = viewPager;
+<span class="lineno"> 289</span>         mViewPager.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 290</span>         invalidate();
+<span class="lineno"> 291</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:304</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 301</span>         if (mViewPager == null) {
+<span class="lineno"> 302</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 303</span>         }
+<span class="lineno"> 304</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 305</span>         mCurrentPage = item;
+<span class="lineno"> 306</span>         invalidate();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:365</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 362</span>             result = specSize;
+<span class="lineno"> 363</span>         } else {
+<span class="lineno"> 364</span>             //Calculate the width according the views count
+<span class="lineno"> 365</span>             final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 366</span>             result = getPaddingLeft() + getPaddingRight() + (count * mLineWidth) + ((count - 1) * mGapWidth);
+<span class="lineno"> 367</span>             //Respect AT_MOST value if that was what is called for by measureSpec
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:58</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno">  55</span>     private final OnClickListener mTabClickListener = new OnClickListener() {
+<span class="lineno">  56</span>         public void onClick(View view) {
+<span class="lineno">  57</span>             TabView tabView = (TabView)view;
+<span class="lineno">  58</span>             final int oldSelected = mViewPager.<span class="errorspan">getCurrentItem();</span>
+<span class="lineno">  59</span>             final int newSelected = tabView.getIndex();
+<span class="lineno">  60</span>             mViewPager.setCurrentItem(newSelected);
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:60</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno">  57</span>             TabView tabView = (TabView)view;
+<span class="lineno">  58</span>             final int oldSelected = mViewPager.getCurrentItem();
+<span class="lineno">  59</span>             final int newSelected = tabView.getIndex();
+<span class="lineno">  60</span>             mViewPager.<span class="errorspan">setCurrentItem(newSelected);</span>
+<span class="lineno">  61</span>             if (oldSelected == newSelected &amp;&amp; mTabReselectedListener != null) {
+<span class="lineno">  62</span>                 mTabReselectedListener.onTabReselected(newSelected);
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:194</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 191</span>             return;
+<span class="lineno"> 192</span>         }
+<span class="lineno"> 193</span>         if (mViewPager != null) {
+<span class="lineno"> 194</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 195</span>         }
+<span class="lineno"> 196</span>         final PagerAdapter adapter = view.getAdapter();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:196</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 193</span>         if (mViewPager != null) {
+<span class="lineno"> 194</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 195</span>         }
+<span class="lineno"> 196</span>         final PagerAdapter adapter = view.<span class="errorspan">getAdapter();</span>
+<span class="lineno"> 197</span>         if (adapter == null) {
+<span class="lineno"> 198</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:201</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 198</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 199</span>         }
+<span class="lineno"> 200</span>         mViewPager = view;
+<span class="lineno"> 201</span>         view.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 202</span>         notifyDataSetChanged();
+<span class="lineno"> 203</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:207</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 204</span> 
+<span class="lineno"> 205</span>     public void notifyDataSetChanged() {
+<span class="lineno"> 206</span>         mTabLayout.removeAllViews();
+<span class="lineno"> 207</span>         PagerAdapter adapter = mViewPager.<span class="errorspan">getAdapter();</span>
+<span class="lineno"> 208</span>         IconPagerAdapter iconAdapter = null;
+<span class="lineno"> 209</span>         if (adapter instanceof IconPagerAdapter) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TabPageIndicator.java">../../src/main/java/com/viewpagerindicator/TabPageIndicator.java</a>:243</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 240</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 241</span>         }
+<span class="lineno"> 242</span>         mSelectedTabIndex = item;
+<span class="lineno"> 243</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 244</span> 
+<span class="lineno"> 245</span>         final int tabCount = mTabLayout.getChildCount();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:360</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 357</span>         if (mViewPager == null) {
+<span class="lineno"> 358</span>             return;
+<span class="lineno"> 359</span>         }
+<span class="lineno"> 360</span>         final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 361</span>         if (count == 0) {
+<span class="lineno"> 362</span>             return;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:367</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 364</span> 
+<span class="lineno"> 365</span>         // mCurrentPage is -1 on first start and after orientation changed. If so, retrieve the correct index from viewpager.
+<span class="lineno"> 366</span>         if (mCurrentPage == -1 &amp;&amp; mViewPager != null) {
+<span class="lineno"> 367</span>             mCurrentPage = mViewPager.<span class="errorspan">getCurrentItem();</span>
+<span class="lineno"> 368</span>         }
+<span class="lineno"> 369</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:548</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 545</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 546</span>             return true;
+<span class="lineno"> 547</span>         }
+<span class="lineno"> 548</span>         if ((mViewPager == null) || (mViewPager.<span class="errorspan">getAdapter().getCount() == 0)) {</span>
+<span class="lineno"> 549</span>             return false;
+<span class="lineno"> 550</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:572</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#beginFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 569</span> 
+<span class="lineno"> 570</span>                 if (mIsDragging) {
+<span class="lineno"> 571</span>                     mLastMotionX = x;
+<span class="lineno"> 572</span>                     if (mViewPager.isFakeDragging() || mViewPager.<span class="errorspan">beginFakeDrag()) {</span>
+<span class="lineno"> 573</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 574</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:572</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 569</span> 
+<span class="lineno"> 570</span>                 if (mIsDragging) {
+<span class="lineno"> 571</span>                     mLastMotionX = x;
+<span class="lineno"> 572</span>                     if (mViewPager.<span class="errorspan">isFakeDragging() || mViewPager.beginFakeDrag()) {</span>
+<span class="lineno"> 573</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 574</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:573</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#fakeDragBy</span><br /><pre class="errorlines">
+<span class="lineno"> 570</span>                 if (mIsDragging) {
+<span class="lineno"> 571</span>                     mLastMotionX = x;
+<span class="lineno"> 572</span>                     if (mViewPager.isFakeDragging() || mViewPager.beginFakeDrag()) {
+<span class="lineno"> 573</span>                         mViewPager.<span class="errorspan">fakeDragBy(deltaX);</span>
+<span class="lineno"> 574</span>                     }
+<span class="lineno"> 575</span>                 }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:583</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 580</span>             case MotionEvent.ACTION_CANCEL:
+<span class="lineno"> 581</span>             case MotionEvent.ACTION_UP:
+<span class="lineno"> 582</span>                 if (!mIsDragging) {
+<span class="lineno"> 583</span>                     final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 584</span>                     final int width = getWidth();
+<span class="lineno"> 585</span>                     final float halfWidth = width / 2f;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:594</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 591</span>                     if (eventX &lt; leftThird) {
+<span class="lineno"> 592</span>                         if (mCurrentPage > 0) {
+<span class="lineno"> 593</span>                             if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 594</span>                                 mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage - 1);</span>
+<span class="lineno"> 595</span>                             }
+<span class="lineno"> 596</span>                             return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:601</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 598</span>                     } else if (eventX > rightThird) {
+<span class="lineno"> 599</span>                         if (mCurrentPage &lt; count - 1) {
+<span class="lineno"> 600</span>                             if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 601</span>                                 mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage + 1);</span>
+<span class="lineno"> 602</span>                             }
+<span class="lineno"> 603</span>                             return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:615</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#endFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 612</span> 
+<span class="lineno"> 613</span>                 mIsDragging = false;
+<span class="lineno"> 614</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 615</span>                 if (mViewPager.isFakeDragging()) mViewPager.<span class="errorspan">endFakeDrag();</span>
+<span class="lineno"> 616</span>                 break;
+<span class="lineno"> 617</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:615</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 612</span> 
+<span class="lineno"> 613</span>                 mIsDragging = false;
+<span class="lineno"> 614</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 615</span>                 if (mViewPager.<span class="errorspan">isFakeDragging()) mViewPager.endFakeDrag();</span>
+<span class="lineno"> 616</span>                 break;
+<span class="lineno"> 617</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:674</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 671</span>     private ArrayList&lt;Rect> calculateAllBounds(Paint paint) {
+<span class="lineno"> 672</span>         ArrayList&lt;Rect> list = new ArrayList&lt;Rect>();
+<span class="lineno"> 673</span>         //For each views (If no values then add a fake one)
+<span class="lineno"> 674</span>         final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 675</span>         final int width = getWidth();
+<span class="lineno"> 676</span>         final int halfWidth = width / 2;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:713</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 710</span>             return;
+<span class="lineno"> 711</span>         }
+<span class="lineno"> 712</span>         if (mViewPager != null) {
+<span class="lineno"> 713</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 714</span>         }
+<span class="lineno"> 715</span>         if (view.getAdapter() == null) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:715</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 712</span>         if (mViewPager != null) {
+<span class="lineno"> 713</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 714</span>         }
+<span class="lineno"> 715</span>         if (view.<span class="errorspan">getAdapter() == null) {</span>
+<span class="lineno"> 716</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 717</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:719</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 716</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 717</span>         }
+<span class="lineno"> 718</span>         mViewPager = view;
+<span class="lineno"> 719</span>         mViewPager.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 720</span>         invalidate();
+<span class="lineno"> 721</span>     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:748</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 745</span>         if (mViewPager == null) {
+<span class="lineno"> 746</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 747</span>         }
+<span class="lineno"> 748</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 749</span>         mCurrentPage = item;
+<span class="lineno"> 750</span>         invalidate();
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:864</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 861</span>     }
+<span class="lineno"> 862</span> 
+<span class="lineno"> 863</span>     private CharSequence getTitle(int i) {
+<span class="lineno"> 864</span>         CharSequence title = mViewPager.<span class="errorspan">getAdapter().getPageTitle(i);</span>
+<span class="lineno"> 865</span>         if (title == null) {
+<span class="lineno"> 866</span>             title = EMPTY_TITLE;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:162</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 159</span>         if (mViewPager == null) {
+<span class="lineno"> 160</span>             return;
+<span class="lineno"> 161</span>         }
+<span class="lineno"> 162</span>         final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 163</span>         if (count == 0) {
+<span class="lineno"> 164</span>             return;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:185</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 182</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 183</span>             return true;
+<span class="lineno"> 184</span>         }
+<span class="lineno"> 185</span>         if ((mViewPager == null) || (mViewPager.<span class="errorspan">getAdapter().getCount() == 0)) {</span>
+<span class="lineno"> 186</span>             return false;
+<span class="lineno"> 187</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:209</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#beginFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 206</span> 
+<span class="lineno"> 207</span>                 if (mIsDragging) {
+<span class="lineno"> 208</span>                     mLastMotionX = x;
+<span class="lineno"> 209</span>                     if (mViewPager.isFakeDragging() || mViewPager.<span class="errorspan">beginFakeDrag()) {</span>
+<span class="lineno"> 210</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 211</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:209</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 206</span> 
+<span class="lineno"> 207</span>                 if (mIsDragging) {
+<span class="lineno"> 208</span>                     mLastMotionX = x;
+<span class="lineno"> 209</span>                     if (mViewPager.<span class="errorspan">isFakeDragging() || mViewPager.beginFakeDrag()) {</span>
+<span class="lineno"> 210</span>                         mViewPager.fakeDragBy(deltaX);
+<span class="lineno"> 211</span>                     }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:210</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#fakeDragBy</span><br /><pre class="errorlines">
+<span class="lineno"> 207</span>                 if (mIsDragging) {
+<span class="lineno"> 208</span>                     mLastMotionX = x;
+<span class="lineno"> 209</span>                     if (mViewPager.isFakeDragging() || mViewPager.beginFakeDrag()) {
+<span class="lineno"> 210</span>                         mViewPager.<span class="errorspan">fakeDragBy(deltaX);</span>
+<span class="lineno"> 211</span>                     }
+<span class="lineno"> 212</span>                 }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:220</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 217</span>             case MotionEvent.ACTION_CANCEL:
+<span class="lineno"> 218</span>             case MotionEvent.ACTION_UP:
+<span class="lineno"> 219</span>                 if (!mIsDragging) {
+<span class="lineno"> 220</span>                     final int count = mViewPager.<span class="errorspan">getAdapter().getCount();</span>
+<span class="lineno"> 221</span>                     final int width = getWidth();
+<span class="lineno"> 222</span>                     final float halfWidth = width / 2f;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:227</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 224</span> 
+<span class="lineno"> 225</span>                     if ((mCurrentPage > 0) &amp;&amp; (ev.getX() &lt; halfWidth - sixthWidth)) {
+<span class="lineno"> 226</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 227</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage - 1);</span>
+<span class="lineno"> 228</span>                         }
+<span class="lineno"> 229</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:232</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 229</span>                         return true;
+<span class="lineno"> 230</span>                     } else if ((mCurrentPage &lt; count - 1) &amp;&amp; (ev.getX() > halfWidth + sixthWidth)) {
+<span class="lineno"> 231</span>                         if (action != MotionEvent.ACTION_CANCEL) {
+<span class="lineno"> 232</span>                             mViewPager.<span class="errorspan">setCurrentItem(mCurrentPage + 1);</span>
+<span class="lineno"> 233</span>                         }
+<span class="lineno"> 234</span>                         return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:240</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#endFakeDrag</span><br /><pre class="errorlines">
+<span class="lineno"> 237</span> 
+<span class="lineno"> 238</span>                 mIsDragging = false;
+<span class="lineno"> 239</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 240</span>                 if (mViewPager.isFakeDragging()) mViewPager.<span class="errorspan">endFakeDrag();</span>
+<span class="lineno"> 241</span>                 break;
+<span class="lineno"> 242</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:240</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#isFakeDragging</span><br /><pre class="errorlines">
+<span class="lineno"> 237</span> 
+<span class="lineno"> 238</span>                 mIsDragging = false;
+<span class="lineno"> 239</span>                 mActivePointerId = INVALID_POINTER;
+<span class="lineno"> 240</span>                 if (mViewPager.<span class="errorspan">isFakeDragging()) mViewPager.endFakeDrag();</span>
+<span class="lineno"> 241</span>                 break;
+<span class="lineno"> 242</span> 
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:271</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 268</span>         }
+<span class="lineno"> 269</span>         if (mViewPager != null) {
+<span class="lineno"> 270</span>             //Clear us from the old pager.
+<span class="lineno"> 271</span>             mViewPager.<span class="errorspan">setOnPageChangeListener(null);</span>
+<span class="lineno"> 272</span>         }
+<span class="lineno"> 273</span>         if (viewPager.getAdapter() == null) {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:273</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#getAdapter</span><br /><pre class="errorlines">
+<span class="lineno"> 270</span>             //Clear us from the old pager.
+<span class="lineno"> 271</span>             mViewPager.setOnPageChangeListener(null);
+<span class="lineno"> 272</span>         }
+<span class="lineno"> 273</span>         if (viewPager.<span class="errorspan">getAdapter() == null) {</span>
+<span class="lineno"> 274</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 275</span>         }
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:277</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setOnPageChangeListener</span><br /><pre class="errorlines">
+<span class="lineno"> 274</span>             throw new IllegalStateException("ViewPager does not have adapter instance.");
+<span class="lineno"> 275</span>         }
+<span class="lineno"> 276</span>         mViewPager = viewPager;
+<span class="lineno"> 277</span>         mViewPager.<span class="errorspan">setOnPageChangeListener(this);</span>
+<span class="lineno"> 278</span>         invalidate();
+<span class="lineno"> 279</span>         post(new Runnable() {
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:299</span>: <span class="message">Call requires API level 9 (current min is 4): android.support.v4.view.ViewPager#setCurrentItem</span><br /><pre class="errorlines">
+<span class="lineno"> 296</span>         if (mViewPager == null) {
+<span class="lineno"> 297</span>             throw new IllegalStateException("ViewPager has not been bound.");
+<span class="lineno"> 298</span>         }
+<span class="lineno"> 299</span>         mViewPager.<span class="errorspan">setCurrentItem(item);</span>
+<span class="lineno"> 300</span>         mCurrentPage = item;
+<span class="lineno"> 301</span>         invalidate();
+</pre>
+</div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ & Eclipse/ADT<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Calling new methods on older versions.</div>
+<div class="explanation">
+This check scans through all the Android API calls in the application and warns about any calls that are not available on <b>all</b> versions targeted by this application (according to its minimum SDK attribute in the manifest).<br/>
+<br/>
+If you really want to use this API and don't need to support older devices just set the <code>minSdkVersion</code> in your <code>build.gradle</code> or <code>AndroidManifest.xml</code> files.<br/>
+<br/>
+If your code is <b>deliberately</b> accessing newer APIs, and you have ensured (e.g. with conditional execution) that this code will only ever be called on a supported platform, then you can annotate your class or method with the <code>@TargetApi</code> annotation specifying the local minimum SDK to apply, such as <code>@TargetApi(11)</code>, such that this check considers 11 rather than your manifest file's minimum SDK as the required API level.<br/>
+<br/>
+If you are deliberately setting <code>android:</code> attributes in style definitions, make sure you place this in a <code>values-vNN</code> folder in order to avoid running into runtime conflicts on certain devices where manufacturers have added custom attributes whose ids conflict with the new ones on later platforms.<br/>
+<br/>
+Similarly, you can use tools:targetApi="11" in an XML file to indicate that the element will only be inflated in an adequate context.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="OldTargetApi"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">OldTargetApi: Target SDK attribute is not targeting latest version</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:9</span>: <span class="message">Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.</span><br /><pre class="errorlines">
+<span class="lineno">   6</span> 
+<span class="lineno">   7</span>     defaultConfig {
+<span class="lineno">   8</span>         minSdkVersion 4
+<span class="lineno">   9</span>         <span class="errorspan">targetSdkVersion 4</span>
+<span class="lineno">  10</span>     }
+<span class="lineno">  11</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Target SDK attribute is not targeting latest version.</div>
+<div class="explanation">
+When your application runs on a version of Android that is more recent than your <code>targetSdkVersion</code> specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the <code>targetSdkVersion</code> is less than 14, your app may get an option button in the UI.<br/>
+<br/>
+To fix this issue, set the <code>targetSdkVersion</code> to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html">http://developer.android.com/reference/android/os/Build.VERSION_CODES.html</a>
+</div><br/>To suppress this error, use the issue id "OldTargetApi" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDependency"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDependency: Obsolete Gradle Dependency</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:21</span>: <span class="message">A newer version of com.android.support:support-v4 than 18.+ is available: 25.0.1</span><br /><pre class="errorlines">
+<span class="lineno">  18</span> }
+<span class="lineno">  19</span> 
+<span class="lineno">  20</span> dependencies {
+<span class="lineno">  21</span>     <span class="errorspan">compile 'com.android.support:support-v4:18.+'</span>
+<span class="lineno">  22</span> }
+<span class="lineno">  23</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Obsolete Gradle Dependency.</div>
+<div class="explanation">
+This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDependency" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleDynamicVersion"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleDynamicVersion: Gradle Dynamic Version</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../build.gradle">../../build.gradle</a>:21</span>: <span class="message">Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (com.android.support:support-v4:18.+)</span><br /><pre class="errorlines">
+<span class="lineno">  18</span> }
+<span class="lineno">  19</span> 
+<span class="lineno">  20</span> dependencies {
+<span class="lineno">  21</span>     <span class="errorspan">compile 'com.android.support:support-v4:18.+'</span>
+<span class="lineno">  22</span> }
+<span class="lineno">  23</span> 
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Gradle Dynamic Version.</div>
+<div class="explanation">
+Using <code>+</code> in dependencies lets you automatically pick up the latest available version rather than a specific, named version. However, this is not recommended; your builds are not repeatable; you may have tested with a slightly different version than what the build server used. (Using a dynamic version as the major version number is more problematic than using it in the minor version position.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleDynamicVersion" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GradleOverrides"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">GradleOverrides: Value overridden by Gradle build script</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/AndroidManifest.xml">../../src/main/AndroidManifest.xml</a>:8</span>: <span class="message">This <code>minSdkVersion</code> value (<code>4</code>) is not used; it is always overridden by the value specified in the Gradle build script (<code>4</code>)</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>     android:versionCode="65"
+<span class="lineno">   6</span>     android:versionName="2.4.1">
+<span class="lineno">   7</span> 
+<span class="lineno">   8</span>     &lt;uses-sdk <span class="errorspan">android:minSdkVersion="4" /></span>
+<span class="lineno">   9</span> &lt;/manifest>
+<span class="lineno">  10</span> 
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Value overridden by Gradle build script.</div>
+<div class="explanation">
+The value of (for example) <code>minSdkVersion</code> is only used if it is not specified in the <code>build.gradle</code> build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "GradleOverrides" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Performance"></a>
+<div class="category"><a href="#" title="Return to top">Performance</a><div class="categorySeparator"></div>
+</div>
+<a name="UnusedResources"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedResources: Unused resources</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/values/vpi__colors.xml">../../src/main/res/values/vpi__colors.xml</a>:18</span>: <span class="message">The resource <code>R.color.vpi__background_holo_dark</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  15</span> -->
+<span class="lineno">  16</span> 
+<span class="lineno">  17</span> &lt;resources>
+<span class="lineno">  18</span>     &lt;color <span class="errorspan">name="vpi__background_holo_dark">#ff000000&lt;/color></span>
+<span class="lineno">  19</span>     &lt;color name="vpi__background_holo_light">#fff3f3f3&lt;/color>
+<span class="lineno">  20</span>     &lt;color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light&lt;/color>
+</pre>
+<span class="location"><a href="../../src/main/res/values/vpi__colors.xml">../../src/main/res/values/vpi__colors.xml</a>:21</span>: <span class="message">The resource <code>R.color.vpi__bright_foreground_holo_light</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  18</span>     &lt;color name="vpi__background_holo_dark">#ff000000&lt;/color>
+<span class="lineno">  19</span>     &lt;color name="vpi__background_holo_light">#fff3f3f3&lt;/color>
+<span class="lineno">  20</span>     &lt;color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light&lt;/color>
+<span class="lineno">  21</span>     &lt;color <span class="errorspan">name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark&lt;/color></span>
+<span class="lineno">  22</span>     &lt;color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c&lt;/color>
+<span class="lineno">  23</span>     &lt;color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2&lt;/color>
+</pre>
+<span class="location"><a href="../../src/main/res/values/vpi__colors.xml">../../src/main/res/values/vpi__colors.xml</a>:23</span>: <span class="message">The resource <code>R.color.vpi__bright_foreground_disabled_holo_light</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  20</span>     &lt;color name="vpi__bright_foreground_holo_dark">@color/vpi__background_holo_light&lt;/color>
+<span class="lineno">  21</span>     &lt;color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark&lt;/color>
+<span class="lineno">  22</span>     &lt;color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c&lt;/color>
+<span class="lineno">  23</span>     &lt;color <span class="errorspan">name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2&lt;/color></span>
+<span class="lineno">  24</span>     &lt;color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light&lt;/color>
+<span class="lineno">  25</span>     &lt;color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark&lt;/color>
+</pre>
+<span class="location"><a href="../../src/main/res/values/vpi__colors.xml">../../src/main/res/values/vpi__colors.xml</a>:24</span>: <span class="message">The resource <code>R.color.vpi__bright_foreground_inverse_holo_dark</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  21</span>     &lt;color name="vpi__bright_foreground_holo_light">@color/vpi__background_holo_dark&lt;/color>
+<span class="lineno">  22</span>     &lt;color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c&lt;/color>
+<span class="lineno">  23</span>     &lt;color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2&lt;/color>
+<span class="lineno">  24</span>     &lt;color <span class="errorspan">name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light&lt;/color></span>
+<span class="lineno">  25</span>     &lt;color name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark&lt;/color>
+<span class="lineno">  26</span> &lt;/resources>
+</pre>
+<span class="location"><a href="../../src/main/res/values/vpi__colors.xml">../../src/main/res/values/vpi__colors.xml</a>:25</span>: <span class="message">The resource <code>R.color.vpi__bright_foreground_inverse_holo_light</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  22</span>     &lt;color name="vpi__bright_foreground_disabled_holo_dark">#ff4c4c4c&lt;/color>
+<span class="lineno">  23</span>     &lt;color name="vpi__bright_foreground_disabled_holo_light">#ffb2b2b2&lt;/color>
+<span class="lineno">  24</span>     &lt;color name="vpi__bright_foreground_inverse_holo_dark">@color/vpi__bright_foreground_holo_light&lt;/color>
+<span class="lineno">  25</span>     &lt;color <span class="errorspan">name="vpi__bright_foreground_inverse_holo_light">@color/vpi__bright_foreground_holo_dark&lt;/color></span>
+<span class="lineno">  26</span> &lt;/resources>
+<span class="lineno">  27</span> 
+</pre>
+<span class="location"><a href="../../src/main/res/color/vpi__light_theme.xml">../../src/main/res/color/vpi__light_theme.xml</a>:17</span>: <span class="message">The resource <code>R.color.vpi__light_theme</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>      limitations under the License.
+<span class="lineno">  15</span> -->
+<span class="lineno">  16</span> 
+<span class="lineno">  17</span> <span class="errorspan">&lt;selector xmlns:android="http://schemas.android.com/apk/res/android"></span>
+<span class="lineno">  18</span>     &lt;item android:state_enabled="false" android:color="@color/vpi__bright_foreground_disabled_holo_light"/>
+<span class="lineno">  19</span>     &lt;item android:state_window_focused="false" android:color="@color/vpi__bright_foreground_holo_light"/>
+</pre>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unused resources.</div>
+<div class="explanation">
+Unused resources make applications larger and slow down builds.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability:Icons"></a>
+<div class="category"><a href="#" title="Return to top">Usability:Icons</a><div class="categorySeparator"></div>
+</div>
+<a name="IconMissingDensityFolder"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">IconMissingDensityFolder: Missing density folder</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res">../../src/main/res</a></span>: <span class="message">Missing density variation folders in <code>src/main/res</code>: drawable-xxhdpi, drawable-xxxhdpi</span><br />
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing density folder.</div>
+<div class="explanation">
+Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as <code>drawable-hdpi</code>.<br/>
+<br/>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+</div><br/>To suppress this error, use the issue id "IconMissingDensityFolder" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability"></a>
+<div class="category"><a href="#" title="Return to top">Usability</a><div class="categorySeparator"></div>
+</div>
+<a name="ViewConstructor"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ViewConstructor: Missing View constructors for XML inflation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/IcsLinearLayout.java">../../src/main/java/com/viewpagerindicator/IcsLinearLayout.java</a>:17</span>: <span class="message">Custom view <code>IcsLinearLayout</code> is missing constructor used by tools: <code>(Context)</code> or <code>(Context,AttributeSet)</code> or <code>(Context,AttributeSet,int)</code></span><br /><pre class="errorlines">
+<span class="lineno">  14</span>  * same orientation as the layout you should wrap the child in a simple
+<span class="lineno">  15</span>  * {@link android.widget.FrameLayout} so it can receive the margin.
+<span class="lineno">  16</span>  */
+<span class="lineno">  17</span> class <span class="errorspan">IcsLinearLayout extends LinearLayout {</span>
+<span class="lineno">  18</span>     private static final int[] LL = new int[] {
+<span class="lineno">  19</span>         /* 0 */ android.R.attr.divider,
+</pre>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing View constructors for XML inflation.</div>
+<div class="explanation">
+Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:<br/>
+* <code>View(Context context)</code><br/>
+* <code>View(Context context, AttributeSet attrs)</code><br/>
+* <code>View(Context context, AttributeSet attrs, int defStyle)</code><br/>
+<br/>
+If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if <code>View#isInEditMode()</code> is false, since that method will return <code>false</code> at runtime but true within a user interface editor.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ViewConstructor" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Accessibility"></a>
+<div class="category"><a href="#" title="Return to top">Accessibility</a><div class="categorySeparator"></div>
+</div>
+<a name="ClickableViewAccessibility"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ClickableViewAccessibility: Accessibility in Custom Views</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java">../../src/main/java/com/viewpagerindicator/CirclePageIndicator.java</a>:281</span>: <span class="message">Custom view <code>com/viewpagerindicator/CirclePageIndicator</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
+<span class="lineno"> 278</span>         canvas.drawCircle(dX, dY, mRadius, mPaintFill);
+<span class="lineno"> 279</span>     }
+<span class="lineno"> 280</span> 
+<span class="lineno"> 281</span>     public boolean <span class="errorspan">onTouchEvent(android.view.MotionEvent ev) {</span>
+<span class="lineno"> 282</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 283</span>             return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/LinePageIndicator.java">../../src/main/java/com/viewpagerindicator/LinePageIndicator.java</a>:193</span>: <span class="message">Custom view <code>com/viewpagerindicator/LinePageIndicator</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
+<span class="lineno"> 190</span>         }
+<span class="lineno"> 191</span>     }
+<span class="lineno"> 192</span> 
+<span class="lineno"> 193</span>     public boolean <span class="errorspan">onTouchEvent(android.view.MotionEvent ev) {</span>
+<span class="lineno"> 194</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 195</span>             return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java">../../src/main/java/com/viewpagerindicator/TitlePageIndicator.java</a>:544</span>: <span class="message">Custom view <code>com/viewpagerindicator/TitlePageIndicator</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
+<span class="lineno"> 541</span>         }
+<span class="lineno"> 542</span>     }
+<span class="lineno"> 543</span> 
+<span class="lineno"> 544</span>     public boolean <span class="errorspan">onTouchEvent(android.view.MotionEvent ev) {</span>
+<span class="lineno"> 545</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 546</span>             return true;
+</pre>
+<span class="location"><a href="../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java">../../src/main/java/com/viewpagerindicator/UnderlinePageIndicator.java</a>:181</span>: <span class="message">Custom view <code>com/viewpagerindicator/UnderlinePageIndicator</code> overrides <code>onTouchEvent</code> but not <code>performClick</code></span><br /><pre class="errorlines">
+<span class="lineno"> 178</span>         canvas.drawRect(left, top, right, bottom, mPaint);
+<span class="lineno"> 179</span>     }
+<span class="lineno"> 180</span> 
+<span class="lineno"> 181</span>     public boolean <span class="errorspan">onTouchEvent(MotionEvent ev) {</span>
+<span class="lineno"> 182</span>         if (super.onTouchEvent(ev)) {
+<span class="lineno"> 183</span>             return true;
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Accessibility</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Accessibility in Custom Views.</div>
+<div class="explanation">
+If a <code>View</code> that overrides <code>onTouchEvent</code> or uses an <code>OnTouchListener</code> does not also implement <code>performClick</code> and call it when clicks are detected, the <code>View</code> may not handle accessibility actions properly. Logic handling the click actions should ideally be placed in <code>View#performClick</code> as some accessibility services invoke <code>performClick</code> when a click action should occur.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ClickableViewAccessibility" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="MissingIssues"></a>
+<div class="category">Disabled Checks<div class="categorySeparator"></div>
+</div>
+The following issues were not run by lint, either because the check is not enabled by default, or because it was disabled with a command line flag or via one or more lint.xml configuration files in the project directories.
+<br/><br/>
+<a name="AppLinksAutoVerifyError"></a>
+<div class="issue">
+<div class="id">AppLinksAutoVerifyError<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: App Links Auto Verification Failure.</div>
+<div class="explanation">
+Ensures that app links are correctly set and associated with website.
+</div>
+<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
+</div><br/>To suppress this error, use the issue id "AppLinksAutoVerifyError" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="AppLinksAutoVerifyWarning"></a>
+<div class="issue">
+<div class="id">AppLinksAutoVerifyWarning<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Potential App Links Auto Verification Failure.</div>
+<div class="explanation">
+Ensures that app links are correctly set and associated with website.
+</div>
+<br/><div class="moreinfo">More info: <a href="https://g.co/appindexing/applinks">https://g.co/appindexing/applinks</a>
+</div><br/>To suppress this error, use the issue id "AppLinksAutoVerifyWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="BackButton"></a>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Back button.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="EasterEgg"></a>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains easter egg.</div>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="FieldGetter"></a>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Using getter instead of field.</div>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="GoogleAppIndexingApiWarning"></a>
+<div class="issue">
+<div class="id">GoogleAppIndexingApiWarning<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Missing support for Firebase App Indexing Api.</div>
+<div class="explanation">
+Adds URLs to get your app into the Google index, to get installs and traffic to your app from Google Search.
+</div>
+<br/><div class="moreinfo">More info: <a href="https://g.co/AppIndexing/AndroidStudio">https://g.co/AppIndexing/AndroidStudio</a>
+</div><br/>To suppress this error, use the issue id "GoogleAppIndexingApiWarning" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconExpectedSize"></a>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Icon has incorrect size.</div>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="LogConditional"></a>
+<div class="issue">
+<div class="id">LogConditional<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unconditional Logging Calls.</div>
+<div class="explanation">
+The BuildConfig class (available in Tools 17) provides a constant, "DEBUG", which indicates whether the code is being built in release mode or in debug mode. In release mode, you typically want to strip out all the logging calls. Since the compiler will automatically remove all code which is inside a "if (false)" check, surrounding your logging calls with a check for BuildConfig.DEBUG is a good idea.<br/>
+<br/>
+If you <b>really</b> intend for the logging to be present in release mode, you can suppress this warning with a @SuppressLint annotation for the intentional logging calls.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "LogConditional" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="MangledCRLF"></a>
+<div class="issue">
+<div class="id">MangledCRLF<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT<br>
+Disabled By: Default<br/>
+Priority: 2 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Mangled file line endings.</div>
+<div class="explanation">
+On Windows, line endings are typically recorded as carriage return plus newline: \r\n.<br/>
+<br/>
+This detector looks for invalid line endings with repeated carriage return characters (without newlines). Previous versions of the ADT plugin could accidentally introduce these into the file, and when editing the file, the editor could produce confusing visual artifacts.
+</div>
+<br/><div class="moreinfo">More info: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421">https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421</a>
+</div><br/>To suppress this error, use the issue id "MangledCRLF" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NegativeMargin"></a>
+<div class="issue">
+<div class="id">NegativeMargin<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Negative Margins.</div>
+<div class="explanation">
+Margin values should be positive. Negative values are generally a sign that you are making assumptions about views surrounding the current one, or may be tempted to turn off child clipping to allow a view to escape its parent. Turning off child clipping to do this not only leads to poor graphical performance, it also results in wrong touch event handling since touch events are based strictly on a chain of parent-rect hit tests. Finally, making assumptions about the size of strings can lead to localization problems.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NegativeMargin" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="NewerVersionAvailable"></a>
+<div class="issue">
+<div class="id">NewerVersionAvailable<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Newer Library Versions Available.</div>
+<div class="explanation">
+This detector checks with a central repository to see if there are newer versions available for the dependencies used by this project. This is similar to the <code>GradleDependency</code> check, which checks for newer versions available in the Android SDK tools and libraries, but this works with any MavenCentral dependency, and connects to the library every time, which makes it more flexible but also <b>much</b> slower.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "NewerVersionAvailable" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SelectableText"></a>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Disabled By: Default<br/>
+Priority: 7 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Dynamic text should probably be selectable.</div>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="StopShip"></a>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ<br>
+Disabled By: Default<br/>
+Priority: 10 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Code contains <code>STOPSHIP</code> marker.</div>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TypographyQuotes"></a>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Android Studio/IntelliJ & Eclipse/ADT<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Typography</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Straight quotes can be replaced with curvy quotes.</div>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)
+</div>
+<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedIds"></a>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 1 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Unused id.</div>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="SuppressInfo"></a>
+<div class="category">Suppressing Warnings and Errors<div class="categorySeparator"></div>
+</div>
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a <code>@SuppressLint</code> annotation in the Java code<br/>
+2. With a <code>tools:ignore</code> attribute in the XML file<br/>
+3. With ignore flags specified in the <code>build.gradle</code> file, as explained below<br/>
+4. With a <code>lint.xml</code> configuration file in the project<br/>
+5. With a <code>lint.xml</code> configuration file passed to lint via the --config flag<br/>
+6. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a <code>@SuppressLint("id")</code> annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as <code>"UnusedResources"</code> or <code>{"UnusedResources","UnusedIds"}</code>, or it can be <code>"all"</code> to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a <code>tools:ignore="id"</code> attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the <code>xmlns:android</code> declaration:<br/>
+<code>xmlns:tools="http://schemas.android.com/tools"</code><br/>
+<br/>
+To suppress a lint warning in a <code>build.gradle</code> file, add a section like this:<br/>
+<br/>
+android {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;lintOptions {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disable 'TypographyFractions','TypographyQuotes'<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+}<br/>
+<br/>
+Here we specify a comma separated list of issue id's after the disable command. You can also use <code>warning</code> or <code>error</code> instead of <code>disable</code> to change the severity of issues.<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named <code>lint.xml</code> and place it at the root directory of the project in which it applies.<br/>
+<br/>
+The format of the <code>lint.xml</code> file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Disable this given check in this project --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="ObsoleteLayoutParam"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="UselessLeaf"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ignore path="res/layout/main.xml" /><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/issue><br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+<code>$ lint --ignore UnusedResources,UselessLeaf /my/project/path</code><br/>
+<br/>
+For more information, see <a href="http://g.co/androidstudio/suppressing-lint-warnings">http://g.co/androidstudio/suppressing-lint-warnings</a><br/>
+
+
+</body>
+</html>

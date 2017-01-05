@@ -5,9 +5,9 @@ import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.AppCompatButton;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -19,12 +19,9 @@ import com.walle.gankio.download.DownLoadListener;
 import com.walle.gankio.download.DownloadChangeObserver;
 import com.walle.gankio.download.DownloadFileInfo;
 import com.walle.gankio.download.FileDownloadManager;
-import com.walle.gankio.utils.LogUtil;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.UUID;
 
 
 public class PicViewerActivity extends BaseActivity implements View.OnClickListener, DownLoadListener {
@@ -61,6 +58,7 @@ public class PicViewerActivity extends BaseActivity implements View.OnClickListe
         mMenu = $(R.id.menu);
         mDownLoad = $(R.id.download);
         mSetWall = $(R.id.setwall);
+
     }
 
     @Override
@@ -151,6 +149,15 @@ public class PicViewerActivity extends BaseActivity implements View.OnClickListe
            } catch (IOException e) {
            }
        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            finishAfterTransition();
+        }else {
+            finish();
+        }
     }
 
     @Override

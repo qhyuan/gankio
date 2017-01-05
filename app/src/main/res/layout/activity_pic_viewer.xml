@@ -7,7 +7,9 @@
     <com.walle.gankio.widget.ZoomImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:transitionName="@string/transition_beauty_img"
+        />
  <LinearLayout
      android:id="@+id/menu"
      android:layout_width="wrap_content"

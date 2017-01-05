@@ -2,6 +2,8 @@ package com.walle.gankio.view.beauty;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,10 +43,15 @@ class BeautyRecyclerViewAdapter extends BaseAdapterWithLoadmore<BeautyRecyclerVi
         holder.mImgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Context context = holder.mImgView.getContext();
                 Intent intent = new Intent(context,PicViewerActivity.class);
                 intent.putExtra("url",item.url);
-                context.startActivity(intent);
+                ActivityOptionsCompat options =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(mFragment.getActivity(),
+                                v, "transition_beauty_img");
+
+                ActivityCompat.startActivity(mFragment.getActivity(), intent, options.toBundle());
             }
         });
 

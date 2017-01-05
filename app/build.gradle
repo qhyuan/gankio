@@ -8,16 +8,16 @@ def releaseTime() {
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion '25.0.0'
 
 
 
     defaultConfig {
         applicationId "com.walle.gankio"
-        minSdkVersion 14
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode 2
-        versionName "1.02"
+        versionName "1.03"
 //        jackOptions{
 //            enabled true
 //        }
@@ -30,7 +30,10 @@ android {
 
     signingConfigs {
         release {
-          
+            storeFile file("yqh.jks")
+            storePassword "yqh19920113"
+            keyAlias "yqh"
+            keyPassword "yqh19920113"
         }
     }
 

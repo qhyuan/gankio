@@ -5,4 +5,5 @@
     <string name="action_open">浏览器中打开</string>
     <string name="action_collect">收藏</string>
     <string name="title_activity_pic_viewer">PicViewerActivity</string>
+    <string name="transition_beauty_img">transition_beauty_img</string>
 </resources>

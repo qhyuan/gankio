@@ -13,6 +13,7 @@ import com.walle.gankio.view.MainActivity;
 public class WelcomeActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         //去除title
         requestWindowFeature(Window.FEATURE_NO_TITLE);
     //去掉Activity上面的状态栏
