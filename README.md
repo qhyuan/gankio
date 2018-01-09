@@ -1,9 +1,6 @@
 # gankio
 GankIO客户端
 
-一个GankIO的手机客户端
-[点我下载]https://raw.githubusercontent.com/soul-ferry/gankio/master/GankIO.apk
-
 功能预览：
 
 ![Screenshot_20160819-162652.png](http://upload-images.jianshu.io/upload_images/1349325-99993cabda477869.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
